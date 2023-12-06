@@ -26,9 +26,9 @@ Website created with javascript and React for the stray cat protection associati
 
 | URL                   | Description       | Protected            |
 | :--------             | :-------          | :--------------------|
-| /crear-gato           | New cat page      |   ✅                 |
+| /registrar-gato           | New cat page      |   ✅                 |
 | /gatos                | Cats list page    |                      |
-| /gatos/detalles:id    | Cat details page  |                      |
+| /gatos/detalles/:id   | Cat details page  |                      |
 | /editar-gato/:id      | Edit cat form page|   ✅                 |
 
 
@@ -39,7 +39,7 @@ Website created with javascript and React for the stray cat protection associati
 | :--------               | :-------            | :--------------------|
 | /crear-evento           | New event page      |   ✅                 |
 | /eventos                | Events list page    |                      |
-| /eventos/detalles:id    | Event details page  |                      |
+| /eventos/detalles/:id   | Event details page  |                      |
 | /editar-evento/:id      | Edit event form page|   ✅                 |
 
 
@@ -49,7 +49,7 @@ Website created with javascript and React for the stray cat protection associati
 | :--------                | :-------             | :------------------|
 | /crear-noticia           | New report page      |   ✅               |
 | /noticias                | Report list page     |                    |
-| /noticias/detalles:id    | Report details page  |                    |
+| /noticias/detalles/:id   | Report details page  |                    |
 | /editar-noticia/:id      | Edit report form page|   ✅               |
 
 # Getting Started with Create React App
