@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
-import { Container } from "react-bootstrap"
+import { Container, Row, Col } from "react-bootstrap"
 import catsService from "../../services/cats.services"
+import CatCard from "../../components/CatCard/CatCard"
 
 const CatsListPage = () => {
 
@@ -17,9 +18,19 @@ const CatsListPage = () => {
         <Container>
             <h1>Listado de gatos</h1>
             <hr />
-            {cats.map(elm => <h3>{elm.name}</h3>)
+            <Row>
+                {
+                    cats.map(elm => {
+                        return (
+                            <Col md={{ span: 4 }} key={elm._id}>
+                                <CatCard {...elm} />
+                            </Col>
 
-            }
+                        )
+                    })
+                }
+            </Row>
+
         </Container>
 
 
