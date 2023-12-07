@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom"
+import CatsListPage from "../pages/CatsListPage/CatsListPage"
 
 
 
@@ -11,7 +12,7 @@ const AppRoutes = () => {
             <Route path="/inicio-sesion" element={<h1>Login</h1>} />
             <Route path="/perfil" element={<h1>Perfil Admin</h1>} />
             <Route path="/registrar-gato" element={<h1>Formulario registrar gato</h1>} />
-            <Route path="/gatos" element={<h1>Listado de gatos en adopción</h1>} />
+            <Route path="/gatos" element={<CatsListPage />} />
             <Route path="/gatos/detalles/:id" element={<h1>Detalles de gato</h1>} />
             <Route path="/editar-gato/:id" element={<h1>Editar gato</h1>} />
             <Route path="/crear-evento" element={<h1>Formulario crear evento</h1>} />
