@@ -10,6 +10,11 @@ class CatService {
     getAllCats() {
         return this.api.get('/getAllCats')
     }
+
+    getOneCat(cat_id) {
+        return this.api.get(`/getOneCat/${cat_id}`)
+    }
+
 }
 
 const catsService = new CatService()
