@@ -13,6 +13,10 @@ class EventService {
         return this.api.get('/getAllEvents')
     }
 
+    getOneEvent(event_id) {
+        return this.api.get(`/getOneEvent/${event_id}`)
+    }
+
 }
 
 const eventsService = new EventService()

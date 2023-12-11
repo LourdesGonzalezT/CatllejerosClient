@@ -3,6 +3,8 @@ import CatsListPage from "../pages/CatsListPage/CatsListPage"
 import CatDetailsPage from "../pages/CatDetailsPage/CatDetailsPage"
 import EventsListPage from "../pages/EventsListPage/EventsListPage"
 import ReportsListPage from "../pages/ReportsListPage/ReportsListPage"
+import EventDetailsPage from "../pages/EventDetailsPage/EventDetailsPage"
+import ReportDetailsPage from "../pages/ReportDetailsPage/ReportDetailsPage"
 
 
 
@@ -19,11 +21,11 @@ const AppRoutes = () => {
             <Route path="/editar-gato/:id" element={<h1>Editar gato</h1>} />
             <Route path="/crear-evento" element={<h1>Formulario crear evento</h1>} />
             <Route path="/eventos" element={<EventsListPage />} />
-            <Route path="/eventos/detalles/:id" element={<h1>detalles de eventos</h1>} />
-            <Route path="/editar-evento/:id" element={<h1>editar evento</h1>} />
+            <Route path="/eventos/detalles/:id" element={<EventDetailsPage />} />
+            <Route path="/editar-evento/:event_id" element={<h1>editar evento</h1>} />
             <Route path="/crear-noticia" element={<h1>Formulario crear noticia</h1>} />
             <Route path="/noticias" element={<ReportsListPage />} />
-            <Route path="/noticias/detalles/:id" element={<h1>detalles de noticia</h1>} />
+            <Route path="/noticias/detalles/:report_id" element={<ReportDetailsPage />} />
             <Route path="/editar-noticia/:id" element={<h1>editar noticia</h1>} />
             <Route path="*" element={<h1>404</h1>} />
 

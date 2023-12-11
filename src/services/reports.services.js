@@ -11,6 +11,10 @@ class ReportService {
         return this.api.get('/getAllReports')
     }
 
+    getOneReport(report_id) {
+        return this.api.get(`/getOneReport/${report_id}`)
+    }
+
 }
 
 const reportsService = new ReportService()
