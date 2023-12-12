@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { useParams, Link } from "react-router-dom"
 import catsService from "../../services/cats.services"
-import { Container } from "react-bootstrap"
+import { Container, Row, Col, Button } from "react-bootstrap"
 
 const CatDetailsPage = () => {
     const { cat_id } = useParams()
@@ -16,8 +16,40 @@ const CatDetailsPage = () => {
 
     return (
         <Container>
-            < h1 > aqui van a ir los detalles del gato con id: {cat_id}</h1 >
-            < h1 > aqui van a ir los detalles del gato con id: {cat.name}</h1 >
+            {
+                !cat
+                    ?
+                    <h1>CARGANDO</h1>
+                    :
+                    <>
+                        <Row>
+                            {/* <Col md={{ span: 4 }}>
+                                <Link to={festival.webSite}>
+                                    <div className="user-image">
+                                        <Image src={festival.image} style={{ width: '100%' }} />
+                                    </div>
+                                </Link>
+                            </Col> */}
+                            <Col md={{ span: 6 }}>
+                                <h3>Información</h3>
+                                <ul>
+                                    <li>Nombre : {cat.name}</li>
+                                    <li>Edad : {cat.age}</li>
+                                    < h1 > aqui van a ir los detalles del gato con id: {cat_id}</h1 >
+                                    < h1 > aqui van a ir los detalles del gato con id: {cat.name}</h1 >
+
+                                </ul>
+                                <hr />
+                                <Link to="/gatos">
+                                    <Button as="div" variant="dark">Volver a todos los gatos</Button>
+                                </Link>
+                            </Col>
+
+                        </Row>
+                    </>
+
+
+            }
         </Container>
 
 

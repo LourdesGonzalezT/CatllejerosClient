@@ -4,6 +4,7 @@ import eventsService from "../../services/events.services"
 import EventsList from "../../components/EventsList/EventsList"
 
 const EventsListPage = () => {
+
     const [events, setEvents] = useState([])
 
     useEffect(() => {
