@@ -15,6 +15,10 @@ class CatService {
         return this.api.get(`/getOneCat/${cat_id}`)
     }
 
+    newCat(catData){
+        return this.api.post('/newCat', catData)
+    }
+
 }
 
 const catsService = new CatService()
